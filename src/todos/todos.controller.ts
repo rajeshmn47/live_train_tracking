@@ -19,8 +19,8 @@ export class TodoController {
   }
 
   @Get('/between/:from/:to')
-  async getBook(@Param('from') from,@Param('to') to,) {
-    const book = await this.service.stationsBW(from,to);
+  async getBook(@Param('from') from, @Param('to') to) {
+    const book = await this.service.stationsBW(from, to);
     return book;
   }
 }
