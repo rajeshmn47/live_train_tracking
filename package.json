@@ -20,6 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@nestjs/cli": "^10.1.7",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/mongoose": "^9.2.2",
@@ -50,7 +51,9 @@
     "tsconfig-paths": "4.2.0",
     "typescript": "^5.0.0"
   },
-  "engines": { "node": "18.16.0" },
+  "engines": {
+    "node": "18.16.0"
+  },
   "jest": {
     "moduleFileExtensions": [
       "js",
