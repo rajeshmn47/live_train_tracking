@@ -8,6 +8,9 @@ async function bootstrap() {
     methods: ['GET', 'POST'],
     credentials: true,
   });
-  await app.listen(8000);
+  const port = process.env.PORT || 8000;
+
+// Listen on `port` and 0.0.0.0
+  await app.listen(port);
 }
 bootstrap();
