@@ -13,7 +13,7 @@ import { TodosService } from './todos.service';
 export class TodoController {
   constructor(private readonly service: TodosService) {}
 
-  @Get()
+  @Get('/all')
   async index() {
     return await this.service.findAll();
   }
@@ -21,6 +21,11 @@ export class TodoController {
   @Get('/between/:from/:to')
   async getBook(@Param('from') from, @Param('to') to) {
     const book = await this.service.stationsBW(from, to);
+    return book;
+  }
+  @Get('/traindetail/:id')
+  async getBooke(@Param('id') id) {
+    const book = await this.service.traindetail(id);
     return book;
   }
 }

@@ -26,4 +26,10 @@ export class TodosService {
       })
       .exec();
   }
+  async traindetail(id): Promise<Train[]> {
+    //return await this.model.find({"stations.stationName":from});
+    return await this.model
+      .find({ trainNumber:id})
+      .exec();
+  }
 }
